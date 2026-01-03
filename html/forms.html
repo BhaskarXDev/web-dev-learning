@@ -11,41 +11,39 @@
 
     <form>
 
-        <!-- Text input -->
+        <!-- Name input with min and max length -->
         <label for="name">Full Name</label><br>
-        <input type="text" id="name" name="name" placeholder="Enter your full name"><br><br>
+        <input 
+            type="text" 
+            id="name" 
+            name="name" 
+            placeholder="Enter your full name"
+            minlength="3"
+            maxlength="30"
+            required
+        ><br><br>
 
-        <!-- Email input-->
+        <!-- Email input -->
         <label for="email">Email Address</label><br>
-        <input type="email" id="email" name="email" placeholder="Enter your email"><br><br>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
 
-        <!-- Date input using calendar -->
+        <!-- Date input -->
         <label for="dob">Date of Birth</label><br>
-        <input type="date" id="dob" name="dob"><br><br>
+        <input type="date" id="dob" name="dob" required><br><br>
 
-        <!-- Radio buttons -->
+        <!-- Gender radio buttons -->
         <label>Gender</label><br>
-        <input type="radio" id="male" name="gender" value="male">
-        <label for="male">Male</label><br>
+        <input type="radio" name="gender" value="male" required> Male<br>
+        <input type="radio" name="gender" value="female"> Female<br>
+        <input type="radio" name="gender" value="other"> Other<br><br>
 
-        <input type="radio" id="female" name="gender" value="female">
-        <label for="female">Female</label><br>
-
-        <input type="radio" id="other" name="gender" value="other">
-        <label for="other">Other</label><br><br>
-
-        <!-- Checkboxes -->
+        <!-- Skills checkboxes -->
         <label>Skills You Know</label><br>
-        <input type="checkbox" id="html" name="skills" value="html">
-        <label for="html">HTML</label><br>
+        <input type="checkbox" name="skills" value="html"> HTML<br>
+        <input type="checkbox" name="skills" value="css"> CSS<br>
+        <input type="checkbox" name="skills" value="javascript"> JavaScript<br><br>
 
-        <input type="checkbox" id="css" name="skills" value="css">
-        <label for="css">CSS</label><br>
-
-        <input type="checkbox" id="js" name="skills" value="javascript">
-        <label for="js">JavaScript</label><br><br>
-
-        <!-- Dropdown  -->
+        <!-- Dropdown -->
         <label for="year">Year of Study</label><br>
         <select id="year" name="year">
             <option value="">Select your year</option>
@@ -55,14 +53,9 @@
             <option value="4">4th Year</option>
         </select><br><br>
 
-        <!-- Radio buttons -->
-        <label>Experience Level</label><br>
-        <input type="radio" name="experience" value="beginner"> Beginner<br>
-        <input type="radio" name="experience" value="intermediate"> Intermediate<br>
-        <input type="radio" name="experience" value="advanced"> Advanced<br><br>
-
-        <!-- Submit button -->
+        <!-- Submit -->
         <input type="submit" value="Register">
+        <input type="reset" value="Reset">
 
     </form>
 
