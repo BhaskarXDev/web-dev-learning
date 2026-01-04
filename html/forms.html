@@ -6,58 +6,102 @@
 </head>
 <body>
 
-    <h1>Student Registration Form</h1>
-    <p>Please fill in the details below.</p>
+<header>
+            <img 
+        src="banner.png" 
+        alt="Please fill the form carefully banner"
+        width="100%"
+        height="180"
+        >
+    
+        <h1>Student Registration Form</h1>
+        <p>Please fill the form carefully</p>
 
+    </header>
+    <p><strong>Note:</strong> All fields are mandatory unless mentioned.</p>
+    <hr>
+    
     <form>
 
-        <!-- Name input with min and max length -->
-        <label for="name">Full Name</label><br>
-        <input 
-            type="text" 
-            id="name" 
-            name="name" 
-            placeholder="Enter your full name"
-            minlength="3"
-            maxlength="30"
-            required
-        ><br><br>
+        <!-- Grouping form elements -->
+        <fieldset>
+            <legend>Student Details</legend>
 
-        <!-- Email input -->
-        <label for="email">Email Address</label><br>
-        <input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
+            <!-- Name input -->
+            <label for="name">Full Name</label><br>
+            <input 
+                type="text" 
+                id="name" 
+                name="name" 
+                placeholder="Enter your full name"
+                minlength="3"
+                maxlength="30"
+                required
+            >
+            <br><br>
 
-        <!-- Date input -->
-        <label for="dob">Date of Birth</label><br>
-        <input type="date" id="dob" name="dob" required><br><br>
+            <!-- Email input -->
+            <label for="email">Email Address</label><br>
+            <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                placeholder="Enter your email" 
+                required
+            >
+            <br><br>
 
-        <!-- Gender radio buttons -->
-        <label>Gender</label><br>
-        <input type="radio" name="gender" value="male" required> Male<br>
-        <input type="radio" name="gender" value="female"> Female<br>
-        <input type="radio" name="gender" value="other"> Other<br><br>
+            <!-- Date of Birth -->
+            <label for="dob">Date of Birth</label><br>
+            <input 
+                type="date" 
+                id="dob" 
+                name="dob" 
+                required
+            >
+            <br><br>
 
-        <!-- Skills checkboxes -->
-        <label>Skills You Know</label><br>
-        <input type="checkbox" name="skills" value="html"> HTML<br>
-        <input type="checkbox" name="skills" value="css"> CSS<br>
-        <input type="checkbox" name="skills" value="javascript"> JavaScript<br><br>
+            <!-- Gender radio buttons -->
+            <label>Gender</label><br>
+            <input type="radio" name="gender" value="male" required> Male<br>
+            <input type="radio" name="gender" value="female"> Female<br>
+            <input type="radio" name="gender" value="other"> Other
+            <br><br>
 
-        <!-- Dropdown -->
-        <label for="year">Year of Study</label><br>
-        <select id="year" name="year">
-            <option value="">Select your year</option>
-            <option value="1">1st Year</option>
-            <option value="2">2nd Year</option>
-            <option value="3">3rd Year</option>
-            <option value="4">4th Year</option>
-        </select><br><br>
+            <!-- Skills checkboxes -->
+            <label>Skills You Know</label><br>
+            <input type="checkbox" name="skills[]" value="html"> HTML<br>
+            <input type="checkbox" name="skills[]" value="css"> CSS<br>
+            <input type="checkbox" name="skills[]" value="javascript"> JavaScript
+            <br><br>
 
-        <!-- Submit -->
-        <input type="submit" value="Register">
-        <input type="reset" value="Reset">
+            <!-- Dropdown -->
+            <label for="year">Year of Study</label><br>
+            <select id="year" name="year" required>
+                <option value="">Select your year</option>
+                <option value="1">1st Year</option>
+                <option value="2">2nd Year</option>
+                <option value="3">3rd Year</option>
+                <option value="4">4th Year</option>
+            </select>
+            <br><br>
+
+            <!-- Form buttons -->
+            <input type="submit" value="Register">
+            <input type="reset" value="Reset">
+
+        </fieldset>
 
     </form>
+    <!-- Form ends -->
+
+    <hr>
+
+    <!-- Footer section -->
+    <footer>
+        <p>© 2026 Student Portal</p>
+        <p>Contact: bhaskarkumar.work@gmail.com</p>
+    </footer>
 
 </body>
 </html>
